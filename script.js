@@ -126,7 +126,9 @@ function createTask(elem, text) {
     task.onclick = (e) => {
       e.target.parentNode.classList.toggle("done");
     };
-    task.oncontextmenu = oncontextmenu__(e);
+    task.oncontextmenu = (e) => {
+      oncontextmenu__(e);
+    };
   };
 });
 
