@@ -13,6 +13,16 @@ body {
   width: 100vw;
   display: grid;
   grid-template-rows: 2fr 1fr auto 1fr;
+  position: relative;
+  opacity: 100%;
+}
+
+.opacity {
+  opacity: 25%;
+}
+
+.visible {
+  display: block !important;
 }
 
 /* HEADER */
@@ -48,7 +58,7 @@ menu {
   justify-content: center;
 }
 
-menu ul {
+#menu ul {
   list-style: none;
   width: 400px;
   border: 1px solid black;
@@ -58,7 +68,7 @@ menu ul {
   justify-content: space-between;
 }
 
-menu ul li {
+#menu ul li {
   cursor: pointer;
   width: 100%;
   padding: 10px 0px;
@@ -143,9 +153,69 @@ menu ul a:last-of-type {
   border-radius: 0px 0px 20px 0px;
 }
 
+/* TASK */
+.task {
+  text-align: center;
+  border-bottom: 1px solid black;
+  cursor: grab;
+}
+
+.task h3 {
+  padding: 10px;
+  opacity: 100%;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.done h3 {
+  opacity: 50%;
+}
+
 /* FOOTER */
 footer {
   border-top: 1px solid black;
   padding: 10px;
   text-align: center;
+}
+
+/* MENU */
+#task_right_menu {
+  background-color: white;
+  z-index: 10000;
+  opacity: 100%;
+  position: absolute;
+  display: none;
+}
+#task_right_menu ul {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 200px;
+  list-style: none;
+}
+#task_right_menu ul li {
+  padding: 5px;
+  text-align: center;
+}
+#task_right_menu ul li:hover {
+    background-color: aliceblue;
+}
+#task_right_menu ul li:first-of-type {
+  border-bottom: 2px solid black;
+}
+
+
+/* EDIT INPUT */
+#editask {
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 500px);
+    height: 50px;
+    width: 1000px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 17px;
+    display: none;
 }
