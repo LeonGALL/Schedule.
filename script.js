@@ -61,14 +61,23 @@ function setMenuNutrition() {
 
 // AJAX REQUESTS TO GET THE ASKED PAGE
 function setPageWeek() {
+  document.getElementById("schedule_container").style.display = "block";
+  document.getElementById("day_container").style.display = "none";
+  document.getElementById("nutrition_container").style.display = "none";
   return false;
 }
 
 function setPageDay() {
+  document.getElementById("schedule_container").style.display = "none";
+  document.getElementById("day_container").style.display = "block";
+  document.getElementById("nutrition_container").style.display = "none";
   return false;
 }
 
 function setPageNutrition() {
+  document.getElementById("schedule_container").style.display = "none";
+  document.getElementById("day_container").style.display = "none";
+  document.getElementById("nutrition_container").style.display = "block";
   return false;
 }
 
@@ -149,7 +158,12 @@ document
   .getElementById("editask")
   .parentNode.addEventListener("submit", (e) => {
     e.preventDefault();
-    current_elem.innerText = document.getElementById("editask").value;
+    if (editask.value === "") {
+      current_elem.parentNode.remove();
+      current_elem.remove();
+    } else {
+      current_elem.innerText = document.getElementById("editask").value;
+    }
     document.getElementById("schedule_container").classList.remove("opacity");
     editask.classList.remove("visible");
     editask.parentNode.classList.remove("visible");

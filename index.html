@@ -33,11 +33,12 @@
         <li id="nutrition_link">Nutrition</li>
       </ul>
     </menu>
+    <!-- SCHEDULE -->
     <div id="schedule_container">
       <div id="schedule_week">
         <div id="Monday" class="day">
           <div class="daytag"><h2>Monday</h2></div>
-          <button class="plusbutton" id="fstpb">Add a task</button>
+          <button class="plusbutton fstpb">Add a task</button>
         </div>
         <div id="Tuesday" class="day">
           <div class="daytag"><h2>Tuesday</h2></div>
@@ -61,10 +62,23 @@
         </div>
         <div id="Sunday" class="day">
           <div class="daytag"><h2>Sunday</h2></div>
-          <button class="plusbutton" id="lstpb">Add a task</button>
+          <button class="plusbutton lstpb">Add a task</button>
         </div>
       </div>
     </div>
+    <!-- DAY -->
+    <div id="day_container">
+      <div id="day" class="day">
+        <div class="daytag" id="daytag">
+          <button>Previous</button>
+          <h2>Monday</h2>
+          <button>Next</button>
+        </div>
+        <button class="plusbutton totalpb">Add a task</button>
+      </div>
+    </div>
+    <!-- NUTRITION -->
+    <div id="nutrition_container"></div>
     <footer>© Léon GALL - All rights reserved</footer>
   </body>
   <script src="script.js"></script>

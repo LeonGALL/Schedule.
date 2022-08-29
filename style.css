@@ -42,7 +42,7 @@ header h1 {
   font-size: 45px;
 }
 
-header button {
+header button, .daytag button {
   cursor: pointer;
   width: 100px;
   height: 30px;
@@ -133,7 +133,6 @@ menu ul a:last-of-type {
 }
 
 .plusbutton {
-  opacity: 80%;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -146,12 +145,16 @@ menu ul a:last-of-type {
   cursor: pointer;
 }
 
-#fstpb {
+.fstpb {
   border-radius: 0px 0px 0px 20px;
 }
 
-#lstpb {
+.lstpb {
   border-radius: 0px 0px 20px 0px;
+}
+
+.totalpb {
+  border-radius: 0px 0px 20px 20px;
 }
 
 /* TASK */
@@ -220,5 +223,28 @@ form {
   border-radius: 10px;
   text-align: center;
   font-size: 17px;
+  display: none;
+  outline: none;
+}
+
+#day_container {
+  padding: 0px 10%;
+  display: none;
+}
+
+#day {
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 30px;
+  height: 604px;
+}
+
+#daytag {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#nutrition_container {
   display: none;
 }
