@@ -141,6 +141,7 @@ function task_edit(elem) {
   var editask = document.getElementById("editask");
   document.getElementById("schedule_container").classList.add("opacity");
   editask.classList.add("visible");
+  editask.parentNode.classList.add("visible");
   editask.value = elem.innerText;
 }
 var current_elem;
@@ -151,5 +152,6 @@ document
     current_elem.innerText = document.getElementById("editask").value;
     document.getElementById("schedule_container").classList.remove("opacity");
     editask.classList.remove("visible");
+    editask.parentNode.classList.remove("visible");
     editask.value = "";
   });
